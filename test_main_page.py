@@ -1,10 +1,10 @@
-from selenium.webdriver.common.by import By
+from .pages.main_page import MainPage
 
-LINK = 'http://selenium1py.pythonanywhere.com/'
 
-def go_to_login_page(browser):
-    login_link = browser.find_element(By.CSS_SELECTOR, '#login_link')
-    login_link.click()
 def test_guest_can_go_to_login_page(browser):
-    browser.get(LINK)
-    go_to_login_page(browser)
+    link = 'http://selenium1py.pythonanywhere.com/'
+    page = MainPage(browser, link)
+    page.open()
+    page.go_to_login_page()
+
+# запускаем тест pytest -v --tb=line --language=en test_main_page.py
