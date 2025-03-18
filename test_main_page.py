@@ -9,4 +9,4 @@ def test_guest_can_go_to_login_page(browser):
     login_page = LoginPage(browser, browser.current_url)
     login_page.should_be_login_page()
 
-# запускаем тест pytest -v --tb=line --language=en test_main_page.py
+# запускаем тест pytest -s -v --tb=line --language=en test_main_page.py
