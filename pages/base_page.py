@@ -33,3 +33,6 @@ class BasePage:
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def comparision_values(self, value_1, value_2):
+        return value_1 == value_2
